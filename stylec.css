@@ -1,0 +1,339 @@
+/* Base Style Overrides & Dark Futuristic Vibe */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0b0f22;
+    color: #e0e6ed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* Dashboard Container Split */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 1600px;
+}
+
+/* Base Neon Card Aesthetics */
+.card {
+    background-color: rgba(16, 20, 38, 0.85);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Text Style */
+.brand h1 {
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+.brand .subtitle {
+    color: #8fa0dd;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+/* Sidebar Layout & Links */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.watchlist-card {
+    align-items: center;
+    border: 2px solid #5a4b9c;
+    box-shadow: inset 0 0 10px rgba(90, 75, 156, 0.5), 0 0 10px rgba(90, 75, 156, 0.5);
+    padding: 15px;
+    text-align: center;
+}
+.watchlist-icon {
+    font-size: 32px;
+    color: #4bce97;
+    margin-bottom: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+}
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: #a4b2cb;
+    font-size: 12px;
+    flex: 1;
+    padding: 10px 5px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.nav-item span { font-size: 20px; }
+.nav-item:hover, .nav-item.active {
+    background-color: rgba(0, 242, 254, 0.1);
+    color: #00f2fe;
+    box-shadow: inset 0 0 8px rgba(0, 242, 254, 0.3);
+}
+
+.globe-placeholder {
+    font-size: 64px;
+    text-align: center;
+    margin: 20px 0;
+    opacity: 0.6;
+}
+
+.quick-stats {
+    gap: 12px;
+    padding: 15px;
+}
+.stat-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.stat-num {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Neon Borders & Accents */
+.cyan-border { border: 2px solid #00f2fe; box-shadow: 0 0 12px rgba(0, 242, 254, 0.2); }
+.amber-border { border: 2px solid #ffb236; box-shadow: 0 0 12px rgba(ff, b2, 36, 0.2); }
+.blue-border { border: 2px solid #3c65fd; box-shadow: 0 0 12px rgba(60, 101, 253, 0.2); }
+.green-border { border: 2px solid #4bce97; box-shadow: 0 0 12px rgba(75, 206, 151, 0.2); }
+.pink-border { border: 2px solid #ff4b83; box-shadow: 0 0 12px rgba(255, 75, 131, 0.2); }
+.red-border { border: 2px solid #ff4b83; box-shadow: 0 0 12px rgba(255, 75, 131, 0.2); }
+.yellow-border { border: 2px solid #facd55; box-shadow: 0 0 12px rgba(250, 205, 85, 0.2); }
+.purple-glow { border: 2px solid #6b52ae; box-shadow: 0 0 12px rgba(107, 82, 174, 0.2); }
+.cyan-glow { border: 2px solid #00f2fe; box-shadow: 0 0 12px rgba(0, 242, 254, 0.2); }
+
+/* Neon Colors */
+.neon-blue { color: #00f2fe; text-shadow: 0 0 5px rgba(0, 242, 254, 0.5); }
+.neon-green { color: #87ffa6; text-shadow: 0 0 5px rgba(135, 255, 166, 0.5); }
+.neon-green-bold { color: #4bce97; text-shadow: 0 0 5px rgba(75, 206, 151, 0.5); }
+.neon-red { color: #ff4b83; text-shadow: 0 0 5px rgba(255, 75, 131, 0.5); }
+
+/* Grid Dashboard Rows */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.grid-row-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.grid-row-2-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+.sub-grid-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.grid-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Inner Card Elements styling */
+.card-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #b0c2f2;
+    margin-bottom: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 8px;
+}
+
+/* Legislative Metrics */
+.legislative-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    align-items: center;
+}
+.metric-item {
+    font-size: 11px;
+    color: #8395b9;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.metric-val {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Circle badge UI */
+.project-metrics {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+.metric-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 11px;
+    color: #8395b9;
+    text-align: center;
+}
+.metric-badge .number {
+    font-size: 16px;
+    font-weight: bold;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    border: 2px solid transparent;
+}
+.circle-blue .number { border-color: #00f2fe; color: #00f2fe; }
+.circle-purple .number { border-color: #a44bff; color: #a44bff; }
+.circle-gold .number { border-color: #facd55; color: #facd55; }
+.circle-red .number { border-color: #ff4b83; color: #ff4b83; }
+
+/* Circular Ring Progress UI */
+.progress-ring-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.progress-ring {
+    border: 6px solid rgba(0, 242, 254, 0.1);
+    border-top: 6px solid #00f2fe;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #00f2fe;
+}
+.progress-desc {
+    font-size: 11px;
+    color: #8395b9;
+    line-height: 1.4;
+}
+
+/* Map Wrappers (Placeholder mapping) */
+.map-wrapper {
+    height: 120px;
+    border-radius: 8px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+.mock-dark-map {
+    background-color: #12182d;
+    background-image: radial-gradient(#1e294b 1px, transparent 1px);
+    background-size: 15px 15px;
+}
+.mock-light-map {
+    background-color: #e5ecd9;
+}
+.marker {
+    position: absolute;
+    font-size: 16px;
+}
+.pin-red { top: 30px; left: 60px; }
+.pin-blue { bottom: 30px; right: 50px; }
+
+/* Line charts Mock */
+.trend-chart-placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 140px;
+    border-left: 2px solid rgba(255,255,255,0.1);
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+    position: relative;
+    padding: 10px;
+}
+.mock-chart-lines {
+    position: absolute;
+    top: 20px; left: 0; right: 0; bottom: 0;
+}
+.chart-line {
+    position: absolute;
+    height: 2px;
+    width: 90%;
+    transform-origin: left;
+}
+.line-blue { background: #00f2fe; top: 40px; transform: rotate(5deg); }
+.line-green { background: #4bce97; top: 70px; transform: rotate(-8deg); }
+.line-red { background: #ff4b83; top: 50px; transform: rotate(10deg); }
+
+.chart-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    font-size: 11px;
+    color: #8395b9;
+}
+
+/* Monthly Submissions Right sidebar components */
+.height-full {
+    height: 100%;
+}
+.horizontal-bar-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    flex-grow: 1;
+}
+.chart-row {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+}
+.chart-row .month {
+    width: 30px;
+    color: #8395b9;
+}
+.chart-row .bar {
+    background-color: #facd55;
+    height: 8px;
+    border-radius: 2px;
+    box-shadow: 0 0 6px rgba(250, 205, 85, 0.4);
+}
+.bar-chart-x-axis {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    font-size: 10px;
+    color: #8395b9;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 6px;
+}

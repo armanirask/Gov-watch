@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOV-WATCH Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Neon Icons Font (Google Icons) -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel = "stylesheet" href = "stylec.css"
+</head>
+<body>
+
+    <div class="dashboard-container">
+        
+        <!-- SIDEBAR (LEFT) -->
+        <aside class="sidebar">
+            <div class="brand">
+                <h1>GOV-WATCH</h1>
+                <p class="subtitle">CIVIC BILLS & PROJECT MONITORING DASHBOARD</p>
+            </div>
+
+            <div class="watchlist-card card">
+                <span class="material-icons-round watchlist-icon">star_border</span>
+                <h3>Government Watchlist</h3>
+            </div>
+
+            <nav class="nav-links">
+                <a href="#" class="nav-item active">
+                    <span class="material-icons-round">dashboard</span> Dashboard
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="material-icons-round">description</span> Bills Tracker
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="material-icons-round">folder</span> Projects
+                </a>
+            </nav>
+
+            <div class="map-preview card purple-glow">
+                <h3>Geographic Activity Map</h3>
+                <div class="globe-placeholder">🌐</div>
+            </div>
+
+            <div class="quick-stats card cyan-glow">
+                <div class="stat-group">
+                    <p>Active Bills:</p>
+                    <span class="stat-num neon-blue">124</span>
+                </div>
+                <div class="stat-group">
+                    <p>Ongoing Projects:</p>
+                    <span class="stat-num neon-green">82</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN DASHBOARD CONTENT -->
+        <main class="main-content">
+
+            <!-- Top Row Widgets -->
+            <div class="grid-row-3">
+                
+                <!-- Legislative Progress Card -->
+                <section class="card cyan-border">
+                    <h2 class="card-title">Legislative Progress</h2>
+                    <div class="legislative-metrics">
+                        <div class="metric-item">Drafted: <span class="metric-val neon-blue">42</span></div>
+                        <div class="metric-item">In Debate: <span class="metric-val neon-green">61</span></div>
+                        <div class="metric-item">Passed: <span class="metric-val neon-green-bold">95</span></div>
+                        <div class="metric-item">Rejected: <span class="metric-val neon-red">27</span></div>
+                    </div>
+                </section>
+
+                <!-- Project Status Overview Card -->
+                <section class="card amber-border">
+                    <h2 class="card-title">Project Status Overview</h2>
+                    <div class="project-metrics">
+                        <div class="metric-badge circle-blue">
+                            <span class="number">82</span>
+                            <span class="label">Planning</span>
+                        </div>
+                        <div class="metric-badge circle-purple">
+                            <span class="number">56</span>
+                            <span class="label">Procurement</span>
+                        </div>
+                        <div class="metric-badge circle-gold">
+                            <span class="number">73</span>
+                            <span class="label">Under Construction</span>
+                        </div>
+                        <div class="metric-badge circle-red">
+                            <span class="number">49</span>
+                            <span class="label">Delayed</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Budget Utilization Card -->
+                <section class="card blue-border">
+                    <h2 class="card-title">Budget Utilization</h2>
+                    <div class="progress-ring-container">
+                        <div class="progress-ring">55%</div>
+                        <p class="progress-desc">Of FY 2026/2027 funds allocated to public projects</p>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Middle Row: Maps and Data -->
+            <div class="grid-row-2-1">
+                
+                <!-- Left Section: Sub Grid of Maps & Charts -->
+                <div class="sub-grid-left">
+                    
+                    <div class="grid-row-2">
+                        <!-- Map 1 -->
+                        <div class="card green-border map-card">
+                            <h2 class="card-title">Active Project Distribution Map</h2>
+                            <div class="map-wrapper mock-dark-map"></div>
+                        </div>
+                        
+                        <!-- Map 2 -->
+                        <div class="card pink-border map-card">
+                            <h2 class="card-title">Infrastructure Progress Tracking</h2>
+                            <div class="map-wrapper mock-light-map">
+                                <span class="marker pin-red">📍</span>
+                                <span class="marker pin-blue">📍</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- History / Line Chart Card -->
+                    <div class="card red-border chart-card">
+                        <h2 class="card-title">Bill Processing Time & Project Completion Trends (2020-2023)</h2>
+                        <div class="trend-chart-placeholder">
+                            <!-- Visual placeholder representing the line graph -->
+                            <div class="mock-chart-lines">
+                                <div class="chart-line line-blue"></div>
+                                <div class="chart-line line-green"></div>
+                                <div class="chart-line line-red"></div>
+                            </div>
+                            <div class="chart-labels">
+                                <span>2020</span>
+                                <span>2021</span>
+                                <span>2022</span>
+                                <span>2023</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Section: Monthly Submissions -->
+                <aside class="sub-grid-right">
+                    <div class="card yellow-border height-full">
+                        <h2 class="card-title">Monthly Bill Submissions (2025-2026)</h2>
+                        <div class="horizontal-bar-chart">
+                            <div class="chart-row"><span class="month">Dec</span><div class="bar" style="width: 80%;"></div></div>
+                            <div class="chart-row"><span class="month">Nov</span><div class="bar" style="width: 50%;"></div></div>
+                            <div class="chart-row"><span class="month">Oct</span><div class="bar" style="width: 90%;"></div></div>
+                            <div class="chart-row"><span class="month">Sep</span><div class="bar" style="width: 70%;"></div></div>
+                            <div class="chart-row"><span class="month">Aug</span><div class="bar" style="width: 30%;"></div></div>
+                            <div class="chart-row"><span class="month">Jul</span><div class="bar" style="width: 50%;"></div></div>
+                            <div class="chart-row"><span class="month">Jun</span><div class="bar" style="width: 100%;"></div></div>
+                            <div class="chart-row"><span class="month">May</span><div class="bar" style="width: 40%;"></div></div>
+                            <div class="chart-row"><span class="month">Apr</span><div class="bar" style="width: 75%;"></div></div>
+                            <div class="chart-row"><span class="month">Mar</span><div class="bar" style="width: 95%;"></div></div>
+                            <div class="chart-row"><span class="month">Dec</span><div class="bar" style="width: 50%;"></div></div>
+                            <div class="chart-row"><span class="month">Jan</span><div class="bar" style="width: 40%;"></div></div>
+                        </div>
+                        <div class="bar-chart-x-axis">
+                            <span>0</span><span>2</span><span>4</span><span>6</span><span>8</span><span>10</span>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
